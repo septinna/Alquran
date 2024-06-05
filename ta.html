@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tugas Akhir</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="ta.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h1 class="mb-0">Surah-Surah Al-Quran</h1>
+                    </div>
+                    <div class="card-body">
+                        <select id="surah-dropdown" class="form-control mb-3">
+                            <option value="">Pilih Surat</option>
+                        </select>
+                        <div id="volume-container" class="form-group">
+                          <label for="volume-range">Volume</label>
+                          <input type="range" class="form-control-range" id="volume-range" min="0" max="1" step="0.01" value="0.5">
+                        </div>
+                        <div id="surah-details"></div>
+                        <audio id="audio" controls style="display:none;"></audio>
+                        <div class="audio-controls">
+                            <i class="fas fa-play-circle" id="play-button"></i>
+                            <i class="fas fa-pause-circle" id="pause-button"></i>
+                            <i class="fas fa-stop-circle" id="stop-button"></i>
+                            <i class="fas fa-backward" id="rewind-button"></i> 
+                            <i class="fas fa-forward" id="forward-button"></i> 
+                            <i class="fas fa-volume-up" id="mute-button"></i>
+                            <span id="current-time"></span> <span id="time-divider">/</span> <span id="duration"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="ta.js"></script>
+
+</body>
+</html>
